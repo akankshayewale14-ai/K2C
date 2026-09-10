@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # KABADIWALA2CONNECT
 
 Bengaluru recycling marketplace: list scrap, compare collector and recycler offers, book pickup, and follow lots through processing.
@@ -61,3 +62,7 @@ cd frontend && npm test
 
 - Docs: http://localhost:8000/docs
 - Health: http://localhost:8000/health
+=======
+# K2C
+Kabadiwala Connect
+>>>>>>> b7a4f0a901fd7670b4e24180cfa4fa6b3783f0fa
