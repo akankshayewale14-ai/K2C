@@ -42,7 +42,7 @@ def register_user(db: Session, data) -> User:
             RecyclerProfile(
                 user_id=user.id,
                 organization_name=data.organization_name or data.full_name,
-                location="Bengaluru",
+                location="Satara",
             )
         )
     elif data.role == Role.BUSINESS:

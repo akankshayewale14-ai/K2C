@@ -22,7 +22,7 @@ def _estimate(db: Session, materials: list) -> tuple[float | None, float | None,
     for item in materials:
         slug = item.get("slug") or item.get("material")
         qty = float(item.get("quantity") or 0)
-        payload = price_payload(db, slug, "Bengaluru") if slug else None
+        payload = price_payload(db, slug, "Satara") if slug else None
         if payload and qty:
             used = True
             low += payload["low"] * qty

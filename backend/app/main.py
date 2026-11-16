@@ -25,7 +25,7 @@ def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(
         title="KABADIWALA2CONNECT API",
-        description="Bengaluru-first circular recycling marketplace. Demo data is labeled DEMO. Live prices require a configured provider.",
+        description="Satara-first circular recycling marketplace. Demo data is labeled DEMO. Live prices require a configured provider.",
         version="1.0.0",
         lifespan=lifespan,
     )

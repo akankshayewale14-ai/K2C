@@ -78,7 +78,7 @@ export function OffersPage() {
         <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
           <aside className="rounded-3xl border border-line bg-forest p-5 text-cream">
             <p className="text-xs uppercase tracking-[0.2em] text-emerald-light">Seller request</p>
-            <h2 className="mt-3 font-display text-2xl font-bold">{selectedListing.area ?? "Bengaluru"}</h2>
+            <h2 className="mt-3 font-display text-2xl font-bold">{selectedListing.area ?? "Satara"}</h2>
             {photoUrls.length ? (
               <div className="mt-4 grid grid-cols-3 gap-2">
                 {photoUrls.map((src, index) => (

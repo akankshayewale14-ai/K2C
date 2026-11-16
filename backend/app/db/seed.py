@@ -32,7 +32,7 @@ MATERIALS = [
     ("plastic", "Plastic", "polymer"),
 ]
 
-# Prototype seed ranges for Bengaluru. data_type=DEMO. Not live market feeds.
+# Prototype seed ranges for Satara. data_type=DEMO. Not live market feeds.
 CITY_PRICES = {
     "copper": (550, 610, 580, 585, 0.89, [540, 552, 568, 575, 580, 588, 585]),
     "aluminium": (145, 175, 160, 162, 0.84, [150, 154, 158, 161, 160, 163, 162]),
@@ -58,19 +58,19 @@ def seed(db: Session) -> None:
         db.flush()
         mats[slug] = m
 
-    db.add(PriceSource(name="Seeded Bengaluru prototype table", source_url=None, provider_key="database", is_configured=True))
+    db.add(PriceSource(name="Seeded Satara prototype table", source_url=None, provider_key="database", is_configured=True))
 
     for slug, (low, high, avg, rec, conf, chart) in CITY_PRICES.items():
         db.add(
             MaterialPrice(
                 material_id=mats[slug].id,
-                location="Bengaluru",
+                location="Satara",
                 neighborhood=None,
                 low=low,
                 high=high,
                 average=avg,
                 recommended=rec,
-                source="Prototype seed — Bengaluru demo table",
+                source="Prototype seed — Satara demo table",
                 source_url=None,
                 retrieved_at=NOW,
                 data_type=DataType.DEMO,
@@ -82,7 +82,7 @@ def seed(db: Session) -> None:
             db.add(
                 MaterialPrice(
                     material_id=mats[slug].id,
-                    location="Bengaluru",
+                    location="Satara",
                     neighborhood=area,
                     low=price - 8,
                     high=price + 8,
@@ -105,7 +105,7 @@ def seed(db: Session) -> None:
         return u
 
     consumer = user("ananya@kabadiwala.local", "Ananya Rao", Role.CONSUMER, "9000000001")
-    db.add(ConsumerProfile(user_id=consumer.id, area="Whitefield", address="Whitefield, Bengaluru", lat=12.9698, lng=77.7500))
+    db.add(ConsumerProfile(user_id=consumer.id, area="Whitefield", address="Whitefield, Satara", lat=12.9698, lng=77.7500))
 
     ravi = user("ravi@kabadiwala.local", "Ravi Kumar", Role.COLLECTOR, "9000000002")
     ravi_p = CollectorProfile(
@@ -160,7 +160,7 @@ def seed(db: Session) -> None:
     rec = RecyclerProfile(
         user_id=recycler_u.id,
         organization_name="Peenya Metals",
-        location="Peenya, Bengaluru",
+        location="Peenya, Satara",
         lat=13.0285,
         lng=77.5197,
         pickup_lead_days=1,
@@ -205,7 +205,7 @@ def seed(db: Session) -> None:
         material_id=mats["ewaste"].id,
         quantity=18,
         unit="kg",
-        location="Bengaluru",
+        location="Satara",
         area="Whitefield",
         status=ListingStatus.PROCESSING,
         estimated_low=720,

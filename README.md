@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # KABADIWALA2CONNECT
 
-Bengaluru recycling marketplace: list scrap, compare collector and recycler offers, book pickup, and follow lots through processing.
+Satara recycling marketplace: list scrap, compare collector and recycler offers, book pickup, and follow lots through processing.
 
 This is a working full-stack app (React + FastAPI + PostgreSQL). Seeded prices and verification records are labeled **DEMO**. They are not live market feeds or government endorsements.
 

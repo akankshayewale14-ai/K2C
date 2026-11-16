@@ -72,7 +72,7 @@ def test_prices_are_labeled_demo():
 def test_scrap_offer_pickup_trace():
     token = login()
     headers = {"Authorization": f"Bearer {token}"}
-    created = client.post("/api/scrap", json={"location": "Bengaluru", "area": "Whitefield"}, headers=headers)
+    created = client.post("/api/scrap", json={"location": "Satara", "area": "Whitefield"}, headers=headers)
     assert created.status_code == 200, created.text
     listing_id = created.json()["id"]
     qty = client.post(

@@ -60,7 +60,7 @@ export function SellPage() {
     setBusy(true);
     setError(null);
     try {
-      let current = listing ?? (await scrapApi.create(token, { location: "Bengaluru", area, description }));
+      let current = listing ?? (await scrapApi.create(token, { location: "Satara", area, description }));
       if (files.length) await scrapApi.upload(token, current.id, files);
       let identMsg: string | null = null;
       let identOk: boolean | null = null;

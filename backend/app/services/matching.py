@@ -6,7 +6,7 @@ from app.models.entities import CollectorProfile, Material, Offer, OfferStatus, 
 from app.providers.routing.factory import haversine_km
 
 
-BENGALURU = (12.9716, 77.5946)
+Satara = (12.9716, 77.5946)
 
 
 def _verified_collector(c: CollectorProfile) -> bool:
@@ -18,14 +18,14 @@ def _verified_recycler(r: RecyclerProfile) -> bool:
 
 
 def generate_offers(db: Session, listing, material: Material | None) -> list[Offer]:
-    origin = (listing.lat or BENGALURU[0], listing.lng or BENGALURU[1])
+    origin = (listing.lat or Satara[0], listing.lng or Satara[1])
     slug = material.slug if material else None
     offers: list[Offer] = []
 
     for collector in db.query(CollectorProfile).all():
         if slug and collector.accepted_materials and slug not in collector.accepted_materials:
             continue
-        dest = (collector.lat or BENGALURU[0], collector.lng or BENGALURU[1])
+        dest = (collector.lat or Satara[0], collector.lng or Satara[1])
         dist = round(haversine_km(origin, dest), 1)
         verified = _verified_collector(collector)
         price_base = listing.estimated_low or 0
@@ -52,7 +52,7 @@ def generate_offers(db: Session, listing, material: Material | None) -> list[Off
         accepted = [m.material_id for m in recycler.materials]
         if material and accepted and material.id not in accepted:
             continue
-        dest = (recycler.lat or BENGALURU[0], recycler.lng or BENGALURU[1])
+        dest = (recycler.lat or Satara[0], recycler.lng or Satara[1])
         dist = round(haversine_km(origin, dest), 1)
         verified = _verified_recycler(recycler)
         bid = next((m.price_per_unit for m in recycler.materials if material and m.material_id == material.id and m.price_per_unit), None)

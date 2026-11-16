@@ -46,7 +46,7 @@ def marketplace_requests(user: User = Depends(require_roles(Role.COLLECTOR, Role
                 "id": str(listing.id),
                 "seller_name": seller.full_name,
                 "seller_type": "Business seller" if seller.role == Role.BUSINESS else "Individual seller",
-                "area": listing.area or listing.location or "Bengaluru",
+                "area": listing.area or listing.location or "Satara",
                 "location": listing.location,
                 "quantity": listing.quantity,
                 "unit": listing.unit,

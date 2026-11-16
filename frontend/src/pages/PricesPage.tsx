@@ -25,7 +25,7 @@ export function PricesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-3xl font-bold">Bengaluru prices</h1>
+        <h1 className="font-display text-3xl font-bold">Satara prices</h1>
         <p className="text-sm text-muted">Every row shows its data type. DEMO means prototype seed tables, not a live exchange.</p>
       </div>
       <div className="overflow-x-auto rounded-2xl border border-line">

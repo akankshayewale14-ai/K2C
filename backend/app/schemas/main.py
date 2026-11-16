@@ -97,7 +97,7 @@ class PriceOut(BaseModel):
 
 
 class ScrapCreate(BaseModel):
-    location: str = "Bengaluru"
+    location: str = "Satara"
     area: Optional[str] = "Whitefield"
     description: Optional[str] = None
     lat: Optional[float] = 12.9698
@@ -235,7 +235,7 @@ class RecyclerOut(BaseModel):
 
 class RecyclerCreate(BaseModel):
     organization_name: str
-    location: str = "Bengaluru"
+    location: str = "Satara"
     lat: Optional[float] = None
     lng: Optional[float] = None
     pickup_lead_days: int = 1

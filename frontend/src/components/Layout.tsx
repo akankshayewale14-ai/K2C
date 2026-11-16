@@ -91,7 +91,7 @@ export function Layout() {
       </main>
       <footer className="border-t border-line px-4 py-8 text-sm text-muted">
         <div className="mx-auto max-w-page">
-          Bengaluru recycling marketplace. Seeded prices are labeled DEMO until a live provider is configured.
+          Satara recycling marketplace. Seeded prices are labeled DEMO until a live provider is configured.
         </div>
       </footer>
     </div>

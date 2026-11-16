@@ -5,7 +5,7 @@ export function HomePage() {
     <div className="space-y-16">
       <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald">Bengaluru</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald">Satara</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold leading-tight md:text-6xl">
             Your scrap. A better price. A smarter journey.
           </h1>
@@ -27,7 +27,7 @@ export function HomePage() {
             <li>1. Photograph scrap and enter quantity</li>
             <li>2. Compare ranked offers from collectors</li>
             <li>3. Accept one offer and request pickup</li>
-            <li>4. Track status in real time on the Bengaluru map</li>
+            <li>4. Track status in real time on the Satara map</li>
             <li>5. Follow the lot through processing</li>
           </ol>
         </div>

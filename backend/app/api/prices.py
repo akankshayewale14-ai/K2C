@@ -21,7 +21,7 @@ def materials(db: Session = Depends(get_db)):
 @router.get("/prices", response_model=list[PriceOut])
 def prices(
     material: str | None = Query(default=None),
-    location: str = Query(default="Bengaluru"),
+    location: str = Query(default="Satara"),
     date: datetime | None = Query(default=None),
     db: Session = Depends(get_db),
 ):
@@ -37,7 +37,7 @@ def prices(
 @router.get("/prices/{material}", response_model=PriceOut)
 def price_one(
     material: str,
-    location: str = Query(default="Bengaluru"),
+    location: str = Query(default="Satara"),
     date: datetime | None = Query(default=None),
     db: Session = Depends(get_db),
 ):

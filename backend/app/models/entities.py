@@ -196,7 +196,7 @@ class MaterialPrice(Base, TimestampMixin):
     __tablename__ = "material_prices"
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     material_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("materials.id"), index=True)
-    location: Mapped[str] = mapped_column(String(80), default="Bengaluru")
+    location: Mapped[str] = mapped_column(String(80), default="Satara")
     neighborhood: Mapped[Optional[str]] = mapped_column(String(80), nullable=True)
     low: Mapped[float] = mapped_column(Float)
     high: Mapped[float] = mapped_column(Float)
@@ -220,7 +220,7 @@ class ScrapListing(Base, TimestampMixin):
     material_id: Mapped[Optional[uuid.UUID]] = mapped_column(ForeignKey("materials.id"), nullable=True)
     quantity: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
     unit: Mapped[str] = mapped_column(String(20), default="kg")
-    location: Mapped[str] = mapped_column(String(80), default="Bengaluru")
+    location: Mapped[str] = mapped_column(String(80), default="Satara")
     area: Mapped[Optional[str]] = mapped_column(String(120), nullable=True)
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     status: Mapped[ListingStatus] = mapped_column(

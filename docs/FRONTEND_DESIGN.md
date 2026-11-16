@@ -6,10 +6,10 @@
 ## 1. Brand Identity
 
 **Product**: Kabadiwala Connect  
-**Location**: Bengaluru, India  
+**Location**: Satara, India  
 **Tagline**: YOUR SCRAP. A BETTER PRICE. A SMARTER JOURNEY.  
 **Category**: Premium Climate-Tech × Circular Economy Marketplace  
-**Tone**: Sophisticated, trustworthy, modern, Mumbai-meets-Silicon-Valley energy with deep Bengaluru identity
+**Tone**: Sophisticated, trustworthy, modern, Mumbai-meets-Silicon-Valley energy with deep Satara identity
 
 ---
 
@@ -130,7 +130,7 @@
 - `PickupStatus` — real-time pickup state
 
 ### 3D Components
-- `BengaluruScene` — main hero canvas
+- `SataraScene` — main hero canvas
 - `CameraRig` — scroll + mouse driven camera
 - `ScrapObject` — individual material mesh
 - `WeighingScale` — scale geometry
@@ -147,12 +147,12 @@
 - `PriceIntelligenceSection` — interactive price discovery
 - `SellScrapSection` — upload + AI identification
 - `MarketplaceSection` — spatial offer cards
-- `SmartPickupSection` — Bengaluru map
+- `SmartPickupSection` — Satara map
 - `VerificationSection` — badge system
 - `TraceabilitySection` — timeline chain
 - `BusinessSection` — bulk institutional
 - `CollectorsSection` — informal collector empowerment
-- `MarketMapSection` — dark Bengaluru map
+- `MarketMapSection` — dark Satara map
 - `TrustSection` — transparency explanation
 - `FinalTransformationSection` — circular loop CTA
 
@@ -235,7 +235,7 @@ HemisphereLight: sky #f0ede6, ground #111411, intensity 0.6
 | 0–20% | Pull back to z=5 | All materials |
 | 20–40% | Shift right, z=7 | Weighing scale + price |
 | 40–60% | Rise + rotate -15° | Collector vehicle |
-| 60–80% | Wide pullback z=12 | Bengaluru environment |
+| 60–80% | Wide pullback z=12 | Satara environment |
 | 80–100% | Top-down + zoom out | Circular network |
 
 ### Mouse Parallax
